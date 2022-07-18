@@ -20,6 +20,3 @@ procedure:
 
       - name: "wayland-client"
         kind: "pkg-config"
-
-      - name: "wayland-egl"
-        kind: "pkg-config"
