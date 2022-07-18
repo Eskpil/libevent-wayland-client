@@ -1,0 +1,4 @@
+project:
+  name: "LibEvent Wayland Client"
+  procedures:
+    - "src"

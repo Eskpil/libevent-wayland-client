@@ -1,0 +1,25 @@
+procedure:
+  name: "src"
+  build:
+    hook:
+      - "client-shell-protocols"
+
+    files: 
+      - "main.c"
+    compiler: "clang"
+    headers: "."
+    
+  link:
+    target: "binary"
+    into: "bin"
+    linker: "linker"
+
+    with:
+      - name: "libevent"
+        kind: "pkg-config"
+
+      - name: "wayland-client"
+        kind: "pkg-config"
+
+      - name: "wayland-egl"
+        kind: "pkg-config"

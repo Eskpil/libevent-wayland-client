@@ -1,0 +1,7 @@
+#!/bin/bash
+
+WAYLAND_PROTOCOLS=$(pkg-config --variable=pkgdatadir wayland-protocols)
+WAYLAND_SCANNER=$(pkg-config --variable=wayland_scanner wayland-scanner)
+
+$WAYLAND_SCANNER client-header $WAYLAND_PROTOCOLS/stable/xdg-shell/xdg-shell.xml "$CHAIN_HEADERS/xdg-client-shell.h"
+$WAYLAND_SCANNER private-code $WAYLAND_PROTOCOLS/stable/xdg-shell/xdg-shell.xml "$CHAIN_SOURCES/xdg-client-shell.c"
